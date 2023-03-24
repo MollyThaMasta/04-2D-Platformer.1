@@ -80,7 +80,7 @@ func set_wall_raycasts(is_enabled):
 	$Wall/Left.enabled = is_enabled
 	$Wall/Right.enabled = is_enabled
 
-func do_damage(_damage):
+func do_damage(damage):
 	queue_free()
 	
 func die():
