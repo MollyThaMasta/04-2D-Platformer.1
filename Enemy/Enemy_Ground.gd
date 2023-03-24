@@ -18,6 +18,7 @@ func _physics_process(_delta):
 
 
 func _on_Area2D_body_entered(body):
+	print(body.name)
 	if velocity.x != 0 and (body.name == "Platform" or body.name == "Ground"):
 		velocity.x = 0
 		direction *= -1
