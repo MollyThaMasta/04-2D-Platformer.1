@@ -20,7 +20,7 @@ export var max_leap = 1200
 var moving = false
 var is_jumping = false
 var double_jumped = false
-var should_direction_flip = true # wether or not player controls (left/right) can flip the player sprite
+var should_direction_flip = true
 
 
 func _physics_process(_delta):
@@ -80,5 +80,8 @@ func set_wall_raycasts(is_enabled):
 	$Wall/Left.enabled = is_enabled
 	$Wall/Right.enabled = is_enabled
 
+func do_damage(_damage):
+	queue_free()
+	
 func die():
 	queue_free()
